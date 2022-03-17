@@ -33,7 +33,7 @@ public class RadixN2Dec {
         for ( int charIdx = 0; charIdx < inStrLen; charIdx++) {
             char inChar = inString.toUpperCase().charAt(charIdx);
             int Index = digits.indexOf(inChar);
-            if (inChar >= 'A' && inChar <= 'B') {
+            if (inChar >= 'A' && inChar <= 'F') {
                 isHexStr = true;
                 DecNum = 16 * DecNum + Index;
             } else if (inChar >= '0' && inChar <= '9') {

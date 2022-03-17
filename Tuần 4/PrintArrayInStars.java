@@ -9,23 +9,23 @@ public class PrintArrayInStars {
         
         int[] Items = new int[NumItem];
 
-        System.out.print("Enter the value of all items (separated by space): ");
         if (Items.length > 0) {
+            System.out.print("Enter the value of all items (separated by space): ");
             for (int i = 0; i < NumItem; ++i) {
                 Items[i] = scanner.nextInt();
             }
-        } else {
-            System.out.print("The array not exist");
-        }
 
-        scanner.close();
+            scanner.close();
 
-        for (int i = 0; i < NumItem; ++i) {
-            System.out.print(i + ": ");
-            for (int starNo = 1; starNo <= Items[i]; ++starNo) {
-                System.out.print("*");
+            for (int i = 0; i < NumItem; ++i) {
+                System.out.print(i + ": ");
+                for (int starNo = 1; starNo <= Items[i]; ++starNo) {
+                    System.out.print("*");
+                }
+                System.out.println("");
             }
-            System.out.println("");
+        } else {
+            System.out.println("The array not exist");
         }
     }
 }

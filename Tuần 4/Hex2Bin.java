@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Hex2Bin {
-    public static String IsHex(String inString) {
+    public static void IsHex(String inString) {
         int inStrLen = inString.length();
         boolean isHexStr = false;
         String Binary = "";
@@ -91,9 +91,10 @@ public class Hex2Bin {
             }
         }
         if (!isHexStr) {
-            Binary = " error: invalid hexadecimal string";
-        } 
-        return Binary;
+            System.out.println("error: invalid hexadecimal string"); 
+        } else {
+            System.out.println("The equivalent binary for hexadecimal " + inString + " is:" + Binary);
+        }
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -102,7 +103,7 @@ public class Hex2Bin {
         String inStr = scanner.next();
 
         scanner.close();
-
-        System.out.println("The equivalent binary for hexadecimal " + inStr + " is:" + IsHex(inStr));
+        
+        IsHex(inStr);
     }
 }

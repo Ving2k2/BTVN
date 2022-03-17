@@ -1,16 +1,21 @@
 import java.util.Scanner;
 
 public class MagicSum {
-    public static boolean hasEight(int num) { 
+    public static boolean hasEight(int num) {
         int lastnum = 0;
+        boolean ItHasEight = false;
         while (num > 0) {
             lastnum = num % 10;
             if (lastnum == 8) {
-                return true;
+                ItHasEight = true;
+                break;
+            } else {
+                num = num / 10;
             }
         }
-        return false;
+        return ItHasEight;
     }
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -28,9 +33,11 @@ public class MagicSum {
                 inNum = scanner.nextInt();
             }
         }
-        
+
         scanner.close();
 
         System.out.println("The magic sum is: " + sum);
     }
 }
+
+

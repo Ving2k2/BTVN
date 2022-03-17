@@ -46,6 +46,7 @@ public class PensionContributionCalculatorWithSentinel {
             System.out.printf("The employer's contribution is : $%.2f%n" , employerContribution);
             System.out.printf("The total contribution is : $%.2f%n" , TotalContribution);
             System.out.println(" ");
+           
             // Read next input and repeat
             System.out.print("Enter the monthly salary (Or -1 to end) : $");
             salary = scanner.nextInt();    
