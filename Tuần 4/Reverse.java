@@ -1,10 +1,24 @@
 import java.util.Scanner;
 
 public class Reverse {
-    public static void Reverse(int[] array) {
+    public static void reverse(int[] array) {
         int[] newArray = new int[array.length];
+        int j = 0;
 
-        for 
+        for (int i = array.length - 1; i >= 0; -- i) {
+            newArray[j] = array[i];
+            j++;
+        }
+
+        for (int i = 0; i < newArray.length; ++i) {
+            if (i == 0) {
+                System.out.print("[" + newArray[i] + ", ");
+            } else if (i == (newArray.length - 1)) {
+                System.out.println(newArray[i] + "]");
+            } else {
+                System.out.print(newArray[i] + ", ");
+            }
+        }
 
     }
     public static void main(String[] args) {
@@ -13,16 +27,18 @@ public class Reverse {
         System.out.print("Enter the number of items: ");
         int NumItem = scanner.nextInt(); 
 
-        int[] Array = new int[NumItem]; // float[] double[]
+        int[] inArray = new int[NumItem];
         
-        if (Array.length > 0) {
+        if (inArray.length > 0) {
             System.out.print("Enter the value of all items (separated by space): ");
             for (int i = 0; i < NumItem; ++i) {
-                Array[i] = scanner.nextInt();
+                inArray[i] = scanner.nextInt();
             }
 
             scanner.close();
             
+            reverse(inArray);
+
         } else {
             System.out.println("The array is empty!");
         }
