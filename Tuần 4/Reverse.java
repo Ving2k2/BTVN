@@ -5,7 +5,7 @@ public class Reverse {
         int[] newArray = new int[array.length];
         int j = 0;
 
-        for (int i = array.length - 1; i >= 0; -- i) {
+        for (int i = array.length - 1; i >= 0; --i) {
             newArray[j] = array[i];
             j++;
         }
