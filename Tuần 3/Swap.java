@@ -21,29 +21,29 @@ public class Swap {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of items of 1st array: ");
-        int NumItem_1 = scanner.nextInt(); 
-        int[] Array_1st = new int[NumItem_1]; 
+        int numItem1 = scanner.nextInt(); 
+        int[] array_1st = new int[numItem1]; 
 
         System.out.print("Enter the number of items of 2nd array: ");
-        int NumItem_2 = scanner.nextInt(); 
-        int[] Array_2nd = new int[NumItem_2]; 
+        int numItem2 = scanner.nextInt(); 
+        int[] array_2nd = new int[numItem2]; 
         
-        if (NumItem_1 > 0 && NumItem_2 > 0) {
+        if (numItem1 > 0 && numItem2 > 0) {
             System.out.print("Enter the value of all items of 1st array (separated by space): ");
-            for (int i = 0; i < NumItem_1; ++i) {
-                Array_1st[i] = scanner.nextInt();
+            for (int i = 0; i < numItem1; ++i) {
+                array_1st[i] = scanner.nextInt();
             }
 
             System.out.print("Enter the value of all items of 2nd array (separated by space): ");
-            for (int i = 0; i < NumItem_2; ++i) {
-                Array_2nd[i] = scanner.nextInt();
+            for (int i = 0; i < numItem2; ++i) {
+                array_2nd[i] = scanner.nextInt();
             }
 
             scanner.close();
 
-            System.out.println(swap(Array_1st, Array_2nd));
+            System.out.println(swap(array_1st, array_2nd));
         } else {
-            System.out.println(swap(Array_1st, Array_2nd));
+            System.out.println(swap(array_1st, array_2nd));
         } 
     }
 }

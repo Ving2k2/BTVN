@@ -14,6 +14,7 @@ public class TestPalindromicPhrase {
         int fIdx = 0;
         int bIdx = inStrLen - 1;
         boolean isPalindrome = false;
+        
         while (fIdx < bIdx) {
             char bChar = inStr.toLowerCase().charAt(bIdx);
             char fChar = inStr.toLowerCase().charAt(fIdx);

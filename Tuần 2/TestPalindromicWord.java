@@ -13,6 +13,7 @@ public class TestPalindromicWord {
         int inStrLen = inStr.length();
         int fIdx = 0;
         int bIdx = inStrLen - 1;
+        
         while (fIdx < bIdx) {
             char bChar = inStr.toLowerCase().charAt(bIdx);
             char fChar = inStr.toLowerCase().charAt(fIdx);

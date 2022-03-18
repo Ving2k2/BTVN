@@ -17,29 +17,29 @@ public class Equal {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of items of 1st array: ");
-        int NumItem_1 = scanner.nextInt(); 
-        int[] Items_1st = new int[NumItem_1]; 
+        int numItem1 = scanner.nextInt(); 
+        int[] array1st = new int[numItem1]; 
 
         System.out.print("Enter the number of items of 2nd array: ");
-        int NumItem_2 = scanner.nextInt(); 
-        int[] Items_2nd = new int[NumItem_2]; 
+        int numItem2 = scanner.nextInt(); 
+        int[] array2nd = new int[numItem2]; 
         
-        if (NumItem_1 > 0 && NumItem_2 > 0) {
+        if (numItem1 > 0 && numItem2 > 0) {
             System.out.print("Enter the value of all items of 1st array (separated by space): ");
-            for (int i = 0; i < NumItem_1; ++i) {
-                Items_1st[i] = scanner.nextInt();
+            for (int i = 0; i < numItem1; ++i) {
+                array1st[i] = scanner.nextInt();
             }
 
             System.out.print("Enter the value of all items of 2nd array (separated by space): ");
-            for (int i = 0; i < NumItem_2; ++i) {
-                Items_2nd[i] = scanner.nextInt();
+            for (int i = 0; i < numItem2; ++i) {
+                array2nd[i] = scanner.nextInt();
             }
 
             scanner.close();
 
-            System.out.println(equals(Items_1st, Items_2nd));
+            System.out.println(equals(array1st, array2nd));
         } else {
-            System.out.println(equals(Items_1st, Items_2nd));
+            System.out.println(equals(array1st, array2nd));
         } 
     }
 }

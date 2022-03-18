@@ -41,13 +41,13 @@ public class Print {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of items: ");
-        int NumItem = scanner.nextInt(); 
+        int numItem = scanner.nextInt(); 
 
-        int[] Items = new int[NumItem]; // float[] double[]
+        int[] Items = new int[numItem]; // float[] double[]
         
         if (Items.length > 0) {
             System.out.print("Enter the value of all items (separated by space): ");
-            for (int i = 0; i < NumItem; ++i) {
+            for (int i = 0; i < numItem; ++i) {
                 Items[i] = scanner.nextInt();
             }
 

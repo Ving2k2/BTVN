@@ -10,15 +10,16 @@ public class Oct2Dec {
         scanner.close();
 
         //loop and print
-        int DecNum = 0;
+        int decNum = 0;
         int lastNum;
         int base = 1;
+
         while (inNum > 0) {
             lastNum = inNum % 10;
             inNum = inNum / 10;
-            DecNum += lastNum * base;
+            decNum += lastNum * base;
             base *= 8;
         }
-        System.out.println("The equivalent decimal number " + inNum + " is: " + DecNum); 
+        System.out.println("The equivalent decimal number " + inNum + " is: " + decNum); 
     }
 }

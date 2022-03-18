@@ -25,20 +25,19 @@ public class Reverse {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of items: ");
-        int NumItem = scanner.nextInt(); 
+        int numItem = scanner.nextInt(); 
 
-        int[] inArray = new int[NumItem];
+        int[] inArray = new int[numItem];
         
         if (inArray.length > 0) {
             System.out.print("Enter the value of all items (separated by space): ");
-            for (int i = 0; i < NumItem; ++i) {
+            for (int i = 0; i < numItem; ++i) {
                 inArray[i] = scanner.nextInt();
             }
 
             scanner.close();
             
             reverse(inArray);
-
         } else {
             System.out.println("The array is empty!");
         }

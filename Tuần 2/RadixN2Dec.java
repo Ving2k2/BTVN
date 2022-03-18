@@ -3,14 +3,15 @@ import java.util.Scanner;
 public class RadixN2Dec {
     public static void Bin2Dec(String inString) {
         int inNum = Integer.parseInt(inString);
-        int DecNum = 0;
+        int decNum = 0;
         int lastNum;
         int base = 1;
         boolean isBinary = false;
+        
         while (inNum > 0) {
             lastNum = inNum % 10;
             if (lastNum == 1 || lastNum == 0) {
-                DecNum += lastNum * base;
+                decNum += lastNum * base;
                 base *= 2;
                 isBinary = true;
             } else {
@@ -20,32 +21,36 @@ public class RadixN2Dec {
             }
             inNum = inNum / 10;
         }
+        
         if (isBinary) {
-            System.out.println("The equivalent decimal number " + inNum + " is: " + DecNum);
+            System.out.println("The equivalent decimal number " + inNum + " is: " + decNum);
         }
     }
 
     public static void Hex2Dec(String inString) {
         String digits = "0123456789ABCDEF";  
         int inStrLen = inString.length();
-        int DecNum = 0;
         boolean isHexStr = false;
+        int decNum = 0; 
+        
         for ( int charIdx = 0; charIdx < inStrLen; charIdx++) {
             char inChar = inString.toUpperCase().charAt(charIdx);
-            int Index = digits.indexOf(inChar);
+            int index = digits.indexOf(inChar);
+
             if (inChar >= 'A' && inChar <= 'F') {
                 isHexStr = true;
-                DecNum = 16 * DecNum + Index;
+                decNum = 16 * decNum + index;
             } else if (inChar >= '0' && inChar <= '9') {
                 isHexStr = true;
-                DecNum = 16 * DecNum + Index;
+                decNum = 16 * decNum + index;
             } else {
                 isHexStr = false;
                 break;
             }
         }
+        
         if (isHexStr) {
-            System.out.println("The equivalent decimal number " + inString + " is: " + DecNum);
+            System.out.println("The equivalent decimal number " + inString + " is: " + decNum);
         } else {
             System.out.println("error: invalid hexadecimal string: " + inString);
         }
@@ -53,16 +58,17 @@ public class RadixN2Dec {
 
     public static void Oct2Dec(String inString) {
         int inNum = Integer.parseInt(inString);
-        int DecNum = 0;
+        int decNum = 0;
         int lastNum;
         int base = 1;
+        
         while (inNum > 0) {
             lastNum = inNum % 10;
             inNum = inNum / 10;
-            DecNum += lastNum * base;
+            decNum += lastNum * base;
             base *= 8;
         }
-        System.out.println("The equivalent decimal number " + inNum + " is: " + DecNum); 
+        System.out.println("The equivalent decimal number " + inNum + " is: " + decNum); 
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

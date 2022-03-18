@@ -4,6 +4,7 @@ public class MagicSum {
     public static boolean hasEight(int num) {
         int lastnum = 0;
         boolean ItHasEight = false;
+        
         while (num > 0) {
             lastnum = num % 10;
             if (lastnum == 8) {

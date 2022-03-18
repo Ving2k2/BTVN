@@ -5,6 +5,7 @@ public class Hex2Bin {
         int inStrLen = inString.length();
         boolean isHexStr = false;
         String Binary = "";
+
         for ( int charIdx = 0; charIdx < inStrLen; charIdx++) {
             char inChar = inString.toUpperCase().charAt(charIdx);
             if (inChar >= 'A' && inChar <= 'F') {
@@ -90,6 +91,7 @@ public class Hex2Bin {
                 break;
             }
         }
+        
         if (!isHexStr) {
             System.out.println("error: invalid hexadecimal string"); 
         } else {

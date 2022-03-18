@@ -10,8 +10,9 @@ public class CaesarCode {
         scanner.close();
 
         //loop and print
-        String CipherStr = "";
+        String cipherStr = "";
         int inStrLen = inStr.length();
+
         System.out.print("The ciphertext string is: ");
         for (int charIdx = 0; charIdx < inStrLen; charIdx++) {
             if (inStr.charAt(charIdx) == 'X') {
@@ -21,10 +22,10 @@ public class CaesarCode {
             } else if (inStr.charAt(charIdx) == 'Z') {
                 System.out.print('C');
             } else {
-                char FakeChar = (char) (inStr.charAt(charIdx) + 3);
-                CipherStr += FakeChar;
+                char fakeChar = (char) (inStr.charAt(charIdx) + 3);
+                cipherStr += fakeChar;
             }
         }
-        System.out.println("The ciphertext string is: " + CipherStr);
+        System.out.println("The ciphertext string is: " + cipherStr);
     }
 }

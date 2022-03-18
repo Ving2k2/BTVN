@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
 public class ArrayToStr {
-    public static String arrayToString(int[] array) {
+    public static String ArrayToString(int[] array) {
         String inStr = "";
+        
         for (int i = 0; i < array.length; ++i) {
             if (i == 0) {
                 inStr += "[" + array[i] + ", ";
@@ -18,19 +19,19 @@ public class ArrayToStr {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of items: ");
-        int NumItem = scanner.nextInt();
+        int numItem = scanner.nextInt();
 
-        int[] Items = new int[NumItem];
+        int[] items = new int[numItem];
         
-        if (Items.length > 0) {
+        if (items.length > 0) {
             System.out.print("Enter the value of all items (separated by space): ");
-            for (int i = 0; i < NumItem; ++i) {
-                Items[i] = scanner.nextInt();
+            for (int i = 0; i < numItem; ++i) {
+                items[i] = scanner.nextInt();
             }
 
             scanner.close();
 
-            System.out.println(arrayToString(Items));
+            System.out.println(ArrayToString(items));
         } else {
             System.out.println("The array is empty!");
         }

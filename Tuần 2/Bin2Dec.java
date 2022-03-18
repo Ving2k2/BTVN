@@ -10,7 +10,7 @@ public class Bin2Dec {
         scanner.close();
 
         //loop and print
-        int DecNum = 0;
+        int decNum = 0;
         int lastNum;
         int base = 1;
         boolean isBinary = false;
@@ -18,7 +18,7 @@ public class Bin2Dec {
             lastNum = inNum % 10;
             inNum = inNum / 10;
             if (lastNum == 1 || lastNum == 0) {
-                DecNum += lastNum * base;
+                decNum += lastNum * base;
                 base *= 2;
                 isBinary = true;
             } else {
@@ -28,7 +28,7 @@ public class Bin2Dec {
             }
         }
         if (isBinary) {
-            System.out.println("The equivalent decimal number for binary " + inNum + " is: " + DecNum);
+            System.out.println("The equivalent decimal number for binary " + inNum + " is: " + decNum);
         }
     }
 }

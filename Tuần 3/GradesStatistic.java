@@ -5,30 +5,31 @@ public class GradesStatistic {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of students: ");
-        int NumStd = scanner.nextInt();
+        int numStd = scanner.nextInt();
 
-        int[] StdGrade = new int[NumStd];
+        int[] stdGrade = new int[numStd];
         
-        if (StdGrade.length > 0) {
-            for (int i = 1; i <= NumStd; ++i) {
+        if (stdGrade.length > 0) {
+            for (int i = 1; i <= numStd; ++i) {
                 System.out.print("Enter the grade for student " + i + " : ");
-                StdGrade[i-1] = scanner.nextInt();
+                stdGrade[i-1] = scanner.nextInt();
             }
             
             scanner.close();
             
             int sum = 0;
-            int max = StdGrade[0];
-            int min = StdGrade[0];
-            for (int i = 0; i < NumStd; ++i) {
-                sum += StdGrade[i];
-                if (StdGrade[i] < min) {
-                    min = StdGrade[i];
-                } else if (max < StdGrade[i]) {
-                    max = StdGrade[i];
+            int max = stdGrade[0];
+            int min = stdGrade[0];
+
+            for (int i = 0; i < numStd; ++i) {
+                sum += stdGrade[i];
+                if (stdGrade[i] < min) {
+                    min = stdGrade[i];
+                } else if (max < stdGrade[i]) {
+                    max = stdGrade[i];
                 }
             }
-            double average = (double) sum / NumStd;
+            double average = (double) sum / numStd;
     
             System.out.printf("The average is: %.2f%n", average);
             System.out.println("The minimum is: " + min);

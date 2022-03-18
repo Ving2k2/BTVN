@@ -15,6 +15,7 @@ public class CopyOf {
     
     public static int[] copyOf(int[] array) {
         int[] copyArray = new int[array.length];
+        
         for (int i = 0; i < array.length; ++i) {
             copyArray[i] = array[i];
         }
@@ -23,6 +24,7 @@ public class CopyOf {
     
     public static int[] copyOf(int[] array, int newLength) {
         int[] copyArray = new int[newLength];
+
         for (int i = 0; i < newLength; ++i) {
             if (i < array.length) {
                 copyArray[i] = array[i];
@@ -37,13 +39,13 @@ public class CopyOf {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of items: ");
-        int NumItem = scanner.nextInt(); 
+        int numItem = scanner.nextInt(); 
 
-        int[] Items = new int[NumItem]; 
+        int[] items = new int[numItem]; 
         
         System.out.print("Enter the value of all items (separated by space): ");
-        for (int i = 0; i < NumItem; ++i) {
-            Items[i] = scanner.nextInt();
+        for (int i = 0; i < numItem; ++i) {
+            items[i] = scanner.nextInt();
         }
         
         System.out.print("Enter the length of copied array: ");
@@ -51,7 +53,7 @@ public class CopyOf {
 
         scanner.close();
 
-        print(copyOf(Items));
-        print(copyOf(Items, length));
+        print(copyOf(items));
+        print(copyOf(items, length));
     }
 }

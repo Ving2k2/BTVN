@@ -5,21 +5,21 @@ public class PrintArrayInStars {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of items: ");
-        int NumItem = scanner.nextInt();
+        int numItem = scanner.nextInt();
         
-        int[] Items = new int[NumItem];
+        int[] items = new int[numItem];
 
-        if (Items.length > 0) {
+        if (items.length > 0) {
             System.out.print("Enter the value of all items (separated by space): ");
-            for (int i = 0; i < NumItem; ++i) {
-                Items[i] = scanner.nextInt();
+            for (int i = 0; i < numItem; ++i) {
+                items[i] = scanner.nextInt();
             }
 
             scanner.close();
 
-            for (int i = 0; i < NumItem; ++i) {
+            for (int i = 0; i < numItem; ++i) {
                 System.out.print(i + ": ");
-                for (int starNo = 1; starNo <= Items[i]; ++starNo) {
+                for (int starNo = 1; starNo <= items[i]; ++starNo) {
                     System.out.print("*");
                 }
                 System.out.println("");

@@ -12,24 +12,25 @@ public class Hex2Dec {
         //loop and print
         String digits = "0123456789ABCDEF";  
         int inStrLen = inStr.length();
-        int DecNum = 0;
+        int decNum = 0;
         boolean isHexStr = false;
+        
         for ( int charIdx = 0; charIdx < inStrLen; charIdx++) {
             char inChar = inStr.toUpperCase().charAt(charIdx);
             int Index = digits.indexOf(inChar);
             if (inChar >= 'A' && inChar <= 'F') {
                 isHexStr = true;
-                DecNum = 16 * DecNum + Index;
+                decNum = 16 * decNum + Index;
             } else if (inChar >= '0' && inChar <= '9') {
                 isHexStr = true;
-                DecNum = 16 * DecNum + Index;
+                decNum = 16 * decNum + Index;
             } else {
                 isHexStr = false;
                 break;
             }
         }
         if (isHexStr) {
-            System.out.println("The equivalent decimal number " + inStr + " is: " + DecNum);
+            System.out.println("The equivalent decimal number " + inStr + " is: " + decNum);
         } else {
             System.out.println("error: invalid hexadecimal string: " + inStr);
         }

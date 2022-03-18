@@ -13,14 +13,14 @@ public class Search {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of items: ");
-        int NumItem = scanner.nextInt(); 
+        int numItem = scanner.nextInt(); 
 
-        int[] Items = new int[NumItem]; 
+        int[] items = new int[numItem]; 
         
-        if (Items.length > 0) {
+        if (items.length > 0) {
             System.out.print("Enter the value of all items (separated by space): ");
-            for (int i = 0; i < NumItem; ++i) {
-                Items[i] = scanner.nextInt();
+            for (int i = 0; i < numItem; ++i) {
+                items[i] = scanner.nextInt();
             }
 
             System.out.print("Enter the number to search in array: ");
@@ -28,8 +28,7 @@ public class Search {
 
             scanner.close();
 
-            System.out.println("The index of " + inNum + " in the array is: (-1 if the number isn't exist) " + search(Items, inNum));
-
+            System.out.println("The index of " + inNum + " in the array is: (-1 if the number isn't exist) " + search(items, inNum));
         } else {
             System.out.println("The array is empty!");
         }        

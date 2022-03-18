@@ -5,25 +5,25 @@ public class PrintArray {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of items: ");
-        int NumItem = scanner.nextInt();
+        int numItem = scanner.nextInt();
 
-        int[] Items = new int[NumItem];
+        int[] items = new int[numItem];
 
-        if (Items.length > 0) {
+        if (items.length > 0) {
             System.out.print("Enter the value of all items (separated by space): ");
-            for (int i = 0; i < NumItem; ++i) {
-                Items[i] = scanner.nextInt();
+            for (int i = 0; i < numItem; ++i) {
+                items[i] = scanner.nextInt();
             }
 
             scanner.close();
         
-            for (int i = 0; i < NumItem; ++i) {
+            for (int i = 0; i < numItem; ++i) {
                 if (i == 0) {
-                    System.out.print("[" + Items[i] + ", ");
-                } else if (i == (NumItem - 1)) {
-                    System.out.println(Items[i] + "]");
+                    System.out.print("[" + items[i] + ", ");
+                } else if (i == (numItem - 1)) {
+                    System.out.println(items[i] + "]");
                 } else {
-                    System.out.print(Items[i] + ", ");
+                    System.out.print(items[i] + ", ");
                 }
             }
         } else {

@@ -10,12 +10,13 @@ public class ExchangeCipher {
         scanner.close();
 
         //loop and print
-        String CipherStr = "";
+        String cipherStr = "";
         int inStrLen = inStr.length();
+
         for (int charIdx = 0; charIdx < inStrLen; charIdx++) {
-            char FakeChar = (char) ('A' + 'Z' - inStr.charAt(charIdx));
-            CipherStr += FakeChar;
+            char fakeChar = (char) ('A' + 'Z' - inStr.charAt(charIdx));
+            cipherStr += fakeChar;
         }
-        System.out.println("The cliphertext string is: " + CipherStr);
+        System.out.println("The cliphertext string is: " + cipherStr);
     }
 }

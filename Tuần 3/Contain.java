@@ -13,23 +13,23 @@ public class Contain {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter the number of items: ");
-        int NumItem = scanner.nextInt();
+        int numItem = scanner.nextInt();
 
-        int[] Items = new int[NumItem];
-        int Number;
+        int[] items = new int[numItem];
+        int number;
 
-        if (Items.length > 0) {
+        if (items.length > 0) {
             System.out.print("Enter the value of all items (separated by space): ");
-            for (int i = 0; i < NumItem; ++i) {
-                Items[i] = scanner.nextInt();
+            for (int i = 0; i < numItem; ++i) {
+                items[i] = scanner.nextInt();
             }
 
             System.out.print("Enter the contained number: ");
-            Number = scanner.nextInt();
+            number = scanner.nextInt();
             
             scanner.close();
 
-            System.out.println(contain(Items, Number));
+            System.out.println(contain(items, number));
         } else {
             System.out.println("The array is empty!");
         }

@@ -10,8 +10,9 @@ public class DecipherCaesarCode {
         scanner.close();
 
         //loop and print
-        String PlainStr = "";
+        String plainStr = "";
         int inStrLen = inStr.length();
+
         System.out.print("The plaintext string is: ");
         for (int charIdx = 0; charIdx < inStrLen; charIdx++) {
             if (inStr.charAt(charIdx) == 'A') {
@@ -22,10 +23,10 @@ public class DecipherCaesarCode {
                 System.out.print('Z');
             } else {
                 char RealChar = (char) (inStr.charAt(charIdx) - 3);
-                PlainStr += RealChar;
+                plainStr += RealChar;
             }
         }
-        System.out.println("The plaintext string is: " + PlainStr);
+        System.out.println("The plaintext string is: " + plainStr);
     }
 }
 

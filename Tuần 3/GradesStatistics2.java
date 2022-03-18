@@ -1,8 +1,9 @@
 import java.util.Scanner;
 
-public class Grades_Statistics {
+public class GradesStatistics2 {
     public static void swap(int[] array) {
         int temp;
+
         for (int i = 0; i < array.length; ++i) {
             for (int j = i + 1; j < array.length; ++j) {
                 if(array[i] > array[j]) {
@@ -16,6 +17,7 @@ public class Grades_Statistics {
     }
     public static double average(int[] array) {
         int sum = 0;
+
         for (int i = 0; i < array.length; ++i) {
             sum += array[i];
         }
@@ -27,6 +29,7 @@ public class Grades_Statistics {
 
     public static int findMin(int[] array) {
         int min = array[0];
+
         for (int i = 0; i < array.length; ++i) {
             if (array[i] < min) {
                 min = array[i];
@@ -38,6 +41,7 @@ public class Grades_Statistics {
 
     public static int findMax(int[] array) {
         int max = array[0];
+
         for (int i = 0; i < array.length; ++i) {
             if (array[i] > max) {
                 max = array[i];
@@ -63,6 +67,7 @@ public class Grades_Statistics {
 
     public static double std(int[] array) {
         double temp = 0;
+    
         for (int i = 0; i < array.length; ++i) {
             temp += (double) Math.pow(array[i],2) - Math.pow(average(array), 2); 
         }
@@ -86,52 +91,49 @@ public class Grades_Statistics {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
-        boolean isErr_1 = false;
-        boolean isErr_2 = false;
+        boolean isErr1 = false;
+        boolean isErr2 = false;
         
         do {
-            System.out.print("Enter the number of students: ");
-            int NumStd = scanner.nextInt();
+            System.out.print("Enter the number of students (<= 100): ");
+            int numStd = scanner.nextInt();
     
-            int[] StdGrade = new int[NumStd];
+            int[] stdGrade = new int[numStd];
             
-            if (StdGrade.length <= 100) {
-                
-                isErr_1 = true;
-                
-                for (int i = 1; i <= NumStd; ++i) {
-                    isErr_2 = false;
+            if (stdGrade.length <= 100) {
+                isErr1 = true;
+                for (int i = 1; i <= numStd; ++i) {
+                    isErr2 = false; 
                     do {
                         System.out.print("Enter the grade (between 0 and 100) for student " + i + " : ");
-                        StdGrade[i-1] = scanner.nextInt();
-                        if (StdGrade[i-1] > 0 && StdGrade[i-1] < 100) {
-                            isErr_2 = true;
+                        stdGrade[i-1] = scanner.nextInt();
+                        if (stdGrade[i-1] > 0 && stdGrade[i-1] < 100) {
+                            isErr2 = true;
                         } else {
                             System.out.println("Error! Please try again"); 
                         }     
-                    } while (!isErr_2);
+                    } while (!isErr2);
                 }
                 
                 scanner.close();
                 
                 //print
                 System.out.print("The grades are : ");
-                print(StdGrade);
+                print(stdGrade);
     
-                System.out.printf("The average is: %.2f%n", average(StdGrade));
+                System.out.printf("The average is: %.2f%n", average(stdGrade));
     
-                System.out.printf("The median is: %.2f%n", findMedian(StdGrade));
+                System.out.printf("The median is: %.2f%n", findMedian(stdGrade));
     
-                System.out.println("The minimum is: " + findMin(StdGrade));
+                System.out.println("The minimum is: " + findMin(stdGrade));
     
-                System.out.println("The maximum is: " + findMax(StdGrade));
+                System.out.println("The maximum is: " + findMax(stdGrade));
     
-                System.out.printf("The standard deviation is: %.2f%n", std(StdGrade));
-    
+                System.out.printf("The standard deviation is: %.2f%n", std(stdGrade));
             } else {
                 System.out.println("Error! Try again.");
-                isErr_1 = false;
+                isErr1 = false;
             }
-        } while (!isErr_1);
+        } while (!isErr1);
     }
 }
