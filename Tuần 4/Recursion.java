@@ -53,8 +53,8 @@ public class Recursion {
         System.out.println(factorial(numFactr));
 
         System.out.print("Enter the number of fibonacci: ");
-        int numFibo = scanner.nextInt();
-        System.out.println(fibonacci(numFibo));
+        int numFib = scanner.nextInt();
+        System.out.println(fibonacci(numFib));
 
         System.out.print("Enter n of num sequence: ");
         int numSeq = scanner.nextInt();
@@ -65,5 +65,7 @@ public class Recursion {
         System.out.print("Enter b: ");
         int b = scanner.nextInt();
         System.out.println(gcd(a,b));
+
+        scanner.close();
     }
 }

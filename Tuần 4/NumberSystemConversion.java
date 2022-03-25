@@ -9,7 +9,7 @@ public class NumberSystemConversion {
         for (int i = 0; i < str.length(); ++i) {
             char inChar = str.charAt(i);
             if ('0' <= inChar && inChar <= '9') {
-                numDec = inRadix * numDec + (Character.valueOf(inChar) - 48);
+                numDec = inRadix * numDec + (inChar - 48);
             } else {
                 numDec = inRadix * numDec + (inChar - 55);
             }

@@ -3,10 +3,7 @@ import java.util.Scanner;
 public class TrigonometricSeries {
     public static double sin(double x, int numTerm) {
         double result = 0;
-        double tempX = 1;
-        int denominator = -1;
-        double temp = tempX / denominator;
-
+        double temp = -1;
 
         for (int i = 1; i <= numTerm; ++i) {
             temp *=  x / i;
@@ -20,9 +17,7 @@ public class TrigonometricSeries {
 
     public static double cos(double x, int numTerm) {
         double result = 1;
-        double tempX = 1;
-        int denominator = 1;
-        double temp = tempX / denominator;
+        double temp = 1;
 
         for (int i = 1; i <= numTerm; ++i) {
             temp *=  x / i;

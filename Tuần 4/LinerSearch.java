@@ -33,7 +33,12 @@ public class LinerSearch {
         System.out.print("Enter the key: ");
         int key = scanner.nextInt();
 
-        System.out.println(linearSearch(items,key));
-        System.out.println(linearSearchIndex(items,key));
+        scanner.close();
+
+        if (linearSearch(items,key)) {
+            System.out.println("The index of key in array is: " + linearSearchIndex(items,key));
+        } else {
+            System.out.println("There is no key in array!");
+        }
     }
 }
