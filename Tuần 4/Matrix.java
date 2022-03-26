@@ -21,7 +21,7 @@ public class Matrix {
         System.out.println();
     }
 
-    public static boolean haveSameDimension(int[][] matrix1, int[][] matrix2)  {
+    public static boolean haveSameDimension(int[][] matrix1, int[][] matrix2) {
         return matrix1.length == matrix2.length && matrix1[0].length == matrix2[0].length;
     }
 

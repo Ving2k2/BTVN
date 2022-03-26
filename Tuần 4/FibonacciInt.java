@@ -7,12 +7,12 @@ public class FibonacciInt {
 
         do {
             fn = fn1 + fn2;
-            System.out.println("F(" + n +") = " + fn);
+            System.out.println("F(" + n + ") = " + fn);
             fn1 = fn2;
             fn2 = fn;
             n++;
         } while (Integer.MAX_VALUE - fn1 >= fn2);
-        System.out.println("F(" + n +") is out of range");
+        System.out.println("F(" + n + ") is out of range");
 
     }
 }

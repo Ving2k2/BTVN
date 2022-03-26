@@ -14,10 +14,10 @@ public class InsertionSort {
     }
 
     public static void main(String[] args) {
-        int[] array = {9,8,7,5,6,1};
+        int[] array = {9, 8, 7, 5, 6, 1};
         insertionSort(array);
 
-        for (int i = 0; i < array.length; i++){
+        for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
 

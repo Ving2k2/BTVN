@@ -36,7 +36,8 @@ public class LinerSearch {
         scanner.close();
 
         if (linearSearch(items,key)) {
-            System.out.println("The index of key in array is: " + linearSearchIndex(items,key));
+            System.out.println("The index of key in array is: "
+                               + linearSearchIndex(items,key));
         } else {
             System.out.println("There is no key in array!");
         }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class WordGuess {
     public static void main(String[] args) {
-        final String[] SECRET_WORD_LIST = {"Test","Have","Comparable","Math"};
+        final String[] SECRET_WORD_LIST = {"Test", "Have", "Comparable", "Math"};
         final String SECRET_WORD = SECRET_WORD_LIST[(int) (Math.random() * SECRET_WORD_LIST.length)].toLowerCase();
         Scanner scanner = new Scanner(System.in);
 

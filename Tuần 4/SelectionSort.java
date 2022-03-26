@@ -16,7 +16,7 @@ public class SelectionSort {
         }
     }
     public static void main(String[] args) {
-        int[] array = {9,8,7,5,6,1};
+        int[] array = {9, 8, 7, 5, 6, 1};
         selectionSort(array);
 
         for (int i = 0; i < array.length; i++){

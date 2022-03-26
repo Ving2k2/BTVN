@@ -5,7 +5,7 @@ public class Recursion {
         if (n == 0) {
             return 1;
         } else {
-            return n * factorial(n-1);
+            return n * factorial(n - 1);
         }
     }
 
@@ -15,7 +15,7 @@ public class Recursion {
         } else if (n == 1) {
             return 1;
         } else {
-            return fibonacci(n-1) + fibonacci(n-2);
+            return fibonacci(n - 1) + fibonacci(n - 2);
         }
     }
 
@@ -39,7 +39,7 @@ public class Recursion {
         if (b == 0) {
             return a;
         } else {
-            return gcd(b,a % b);
+            return gcd(b, a % b);
         }
     }
 
